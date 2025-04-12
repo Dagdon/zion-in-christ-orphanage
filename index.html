@@ -16,17 +16,19 @@
         /* Variables */
         :root {
             --primary-blue: #1a73e8;
-            --accent-red: #d32f2f;
+            --accent-orange: #FFA500;
+            --peach-text: #FFDAB9;
             --white: #ffffff;
             --black: #000000;
             --text-dark: #333333;
+            --charcoal-gray: #36454F;
         }
 
         body {
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--white);
-            padding-top: 80px; /* Space for fixed header */
+            padding-top: 100px; /* Space for fixed header */
         }
 
         /* Fixed Header */
@@ -40,6 +42,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 10px 5%
         }
 
         .logo-container {
@@ -48,7 +51,7 @@
         }
 
         .logo {
-            height: 60px;
+            height: 80px;
             width: auto;
         }
 
@@ -74,8 +77,8 @@
         }
 
         .get-involved-btn {
-            background-color: var(--accent-red);
-            color: var(--white);
+            background-color: var(--accent-orange);
+            color: var(--black);
             padding: 8px 15px;
             border-radius: 5px;
             font-weight: bold;
@@ -118,7 +121,7 @@
         
         .sub-heading {
             background-color: var(--primary-blue);
-            color: var(--white);
+            color: var(--peach-text);
             display: inline-block;
             padding: 8px 15px;
             border-radius: 5px;
@@ -127,10 +130,18 @@
         }
 
         .content-row {
-            width: 300px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .content-row img {
+            width: 400px;
             height: auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            object-fit: cover;
         }
 
         .content-text {
@@ -138,8 +149,8 @@
         }
 
         .see-more-btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            background-color: var(--accent-orange);
+            color: var(--black);
             padding: 8px 15px;
             border-radius: 5px;
             display: inline-block;
@@ -148,6 +159,20 @@
             text-transform: uppercase;
             font-weight: bold;
             font-size: 14px;
+        }
+
+        /* ADDRESS SECTION */
+        .address-section {
+            background-color: var(--charcoal-gray);
+            color: var(--white);
+            text-align: center;
+            padding: 60px 5%;
+        }
+
+        .address-section .logo {
+            height: 100px; /* Larger logo */
+            margin: 20px auto;
+            display: block;
         }
 
         /* Responsive Design */
@@ -183,14 +208,14 @@
     </style>
 </head>
 <body>
-    <!-- Fixed Header -->
+    <!-- Header -->
     <header>
         <div class="logo-container">
-            <img src="Images\zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
+            <img src="Images/zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
         </div>
         <ul class="nav-links">
             <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT US</a></li>
+            <li><a href="#">CONTACT</a></li>
             <li><a href="#">PROJECTS</a></li>
             <li><a href="#">MEDIA</a></li>
             <li><a href="#" class="get-involved-btn">GET INVOLVED</a></li>
@@ -207,17 +232,17 @@
         <h2 class="sub-heading">Zion In Christ Orphanage Home</h2>
         <p>Following the vision birthed passion of Evangelist Bilhatu Vou Dung, Zion In Christ Orphanage Home was established to provide care to vulnerable children, particularly orphans who lost their parents in terrorist and bandit attacks. Our mission is to offer these children a home and family life opportunity under the loving Lordship of Jesus Christ and also extends the redemptive love of Christ to widows and less privilege persons.</p>
         <p><strong>Registration Number:</strong> RC 98841</p>
-        <p><strong>Established:</strong> January, 2019</p>
+        <p><strong>Established:</strong> January, 2020.</p>
     </section>
 
     <!-- Visioneer Section -->
     <section class="section">
         <div class="content-row">
-            <img src="Images\mummy_zion1.jpg" alt="Evangelist Bilhatu Vou Dung">
+            <img src="Images/mummy_zion1.jpg" alt="Evangelist Bilhatu Vou Dung">
             <div class="content-text">
                 <h2 class="sub-heading">VISIONEER</h2>
                 <p>I started this orphanage because I grew up in a similar situation and knew the struggles firsthand. I wanted to provide a safe, loving environment for children who deserve a chance to thrive. My vision is to:</p>
-                <a href="#" class="see-more-btn">SEE MORE</a>
+                <a href="#" class="see-more-btn">LEARN MORE</a>
             </div>
         </div>
     </section>
@@ -227,7 +252,7 @@
         <div class="content-row">
             <img src="Images\vission.jpg" alt="Our Vision">
             <div class="content-text">
-                <h2 class="sub-heading">VISION</h2>
+                <h2 class="sub-heading">OUR VISION</h2>
                 <p>To change the lives of orphans by helping them have a future through God's love, believing that God will provide them with family life once again, regardless of their tribe, race, nationality, or background.</p>
 
             </div>
@@ -239,11 +264,17 @@
         <div class="content-row">
             <img src="Images\mission.jpg" alt="Our Mission">
             <div class="content-text">
-                <h2 class="sub-heading">MISSION</h2>
-                <p>To nurture orphans in a Christ-centered home, equipping them through programs that develop their potentials and positioning them in society to maximize their impact.</p>
+                <h2 class="sub-heading">OUR MISSION</h2>
+                <p>To nurture orphans in a Christ-centered home, equipping them through activities and programs that develop their potentials and positioning them in society to maximize their impact.</p>
 
             </div>
         </div>
+    </section>
+
+    <!-- ADDRESS SECTION -->
+    <section class="address-section">
+        <p>Zion in Christ Orphanage is located at Zion Street, Adjacent Redeem Christian Church of God, Bagado, Kamazou, Kaduna, Kaduna State, Nigeria.</p>
+        <img src="Images/zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
     </section>
 </body>
 </html>
