@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Zion in Christ Orphanage</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Variables */
+        :root {
+            --primary-blue: #1a73e8;
+            --accent-orange: #FFA500;
+            --peach-text: #FFDAB9;
+            --white: #ffffff;
+            --black: #000000;
+            --text-dark: #333333;
+            --charcoal-gray: #36454F;
+            --dark-blue: #1a237e;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+        }
+
+         /* Header with Charcoal Gray Background */
+         header {
+            background-color: var(--charcoal-gray);
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--peach-text);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .get-involved-btn {
+            background-color: var(--accent-orange);
+            color: var(--black);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Social Media Icons Section */
+        .social-media {
+            background-color: var(--charcoal-gray);
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+
+        /* Contact Content Section */
+        .contact-content {
+            display: flex;
+            align-items: center;
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .contact-image {
+            width: 50%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .contact-info {
+            width: 50%;
+            padding-left: 40px;
+        }
+
+        .contact-info h2 {
+            color: var(--dark-blue);
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .address {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: var(--dark-blue);
+        }
+
+        .address strong {
+            font-weight: bold;
+        }
+
+        .phone-numbers {
+            font-size: 18px;
+            line-height: 1.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+            
+            .contact-image, 
+            .contact-info {
+                width: 100%;
+                padding-left: 0;
+            }
+
+            .contact-info {
+                margin-top: 30px;
+            }
+        }
+    </style>
+</head>
+    <!-- Header with Charcoal Gray Background -->
+    <header>
+        <div class="logo-container">
+            <img src="Images/zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="needs.html">NEEDS</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="#" class="get-involved-btn">GET INVOLVED</a></li>
+        </ul>
+    </header>
+
+    <!-- Social Media Icons -->
+    <section class="social-media">
+        <div class="social-icons">
+            <!-- Facebook -->
+            <a href="https://www.facebook.com/share/15zg8WYeyD/?mibextid=LQQJ4d" target="_blank">
+                <img src="Images/facebook.png" alt="Facebook" class="social-icon">
+            </a>
+            
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/zion_in_christ_orphanage_home?igsh=ZWZya2l4YnF2dTcy" target="_blank">
+                <img src="Images/instagram.jpg" alt="Instagram" class="social-icon">
+            </a>
+            
+            <!-- Gmail -->
+            <a href="mailto:zioninchristorphanage@gmail.com">
+                <img src="Images/gmail.jpg" alt="Gmail" class="social-icon">
+            </a>
+            
+            <!-- Twitter/X -->
+            <a href="https://x.com/zionorpanagehom?s=21" target="_blank">
+                <img src="Images/x.png" alt="Twitter/X" class="social-icon">
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Content Section -->
+    <section class="contact-content">
+        <img src="Images/address.jpg" alt="Zion in Christ Orphanage" class="contact-image">
+        
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            
+            <p class="address">
+                <strong>Address:</strong> Zion in Christ Orphanage, Zion Street, Adjacent Redeem Christian Church of God, Bagado, Kamazou, Kaduna, Kaduna State, Nigeria.
+            </p>
+            
+            <div class="phone-numbers">
+                <strong>Tel:</strong><br>
+                +234 903 326 0668<br>
+                +234 803 598 4436
+            </div>
+        </div>
+    </section>
+<body>
+</html>
