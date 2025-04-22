@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Zion in Christ Orphanage</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Variables */
+        :root {
+            --primary-blue: #1a73e8;
+            --accent-orange: #FFA500;
+            --peach-text: #FFDAB9;
+            --white: #ffffff;
+            --black: #000000;
+            --text-dark: #333333;
+            --charcoal-gray: #36454F;
+            --dark-blue: #1a237e;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            padding-top: 100px;
+        }
+
+        /* Header with Charcoal Gray Background */
+        header {
+            background-color: var(--charcoal-gray);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--peach-text);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .get-involved-btn {
+            background-color: var(--accent-orange);
+            color: var(--black);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Content Sections */
+        .section {
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-white {
+            background-color: var(--white);
+        }
+        
+        .sub-heading {
+            background-color: var(--primary-blue);
+            color: var(--peach-text);
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            font-size: 18px;
+            text-align: center;
+            width: 100%;
+        }
+
+        .visioneer-content {
+            text-align: center;
+            color: var(--dark-blue);
+        }
+
+        .visioneer-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 30px;
+            display: block;
+            border: 5px solid var(--primary-blue);
+        }
+
+        .vision-text {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: left;
+            padding: 0 20px;
+        }
+
+        .vision-text ul {
+            margin: 15px 0 25px 20px;
+        }
+
+        .vision-text li {
+            margin-bottom: 10px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .about-image {
+            width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .about-text {
+            flex: 1;
+            color: var(--dark-blue);
+        }
+
+        .about-text h3 {
+            font-weight: bold;
+            margin: 20px 0 10px;
+            color: var(--primary-blue);
+        }
+
+        .about-text ul {
+            margin: 10px 0 20px 20px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .visioneer-image {
+                width: 250px;
+                height: 250px;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                width: 100%;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Charcoal Gray Background -->
+    <header>
+        <div class="logo-container">
+            <img src="Images/zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="needs.html">NEEDS</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="#" class="get-involved-btn">GET INVOLVED</a></li>
+        </ul>
+    </header>
+
+    <!-- Visioneer Section -->
+    <section class="section section-white">
+        <div class="visioneer-content">
+            <h2 class="sub-heading">VISIONEER</h2>
+            <img src="Images/visioneer.jpg" alt="Visioneer" class="visioneer-image">
+            <div class="vision-text">
+                <p>I started this orphanage because I grew up in a similar situation and knew the struggles firsthand. I wanted to provide a safe, loving environment for children who deserve a chance to thrive. My vision is to:</p>
+                
+                <p><strong>Empower resilient young individuals through:</strong></p>
+                <ul>
+                    <li>Holistic education (academic, emotional, and social).</li>
+                    <li>Vocational skills training and entrepreneurship programs.</li>
+                    <li>Mentorship and leadership development.</li>
+                </ul>
+                
+                <p><strong>Break the cycle of poverty by:</strong></p>
+                <ul>
+                    <li>Providing access to healthcare, nutrition, and wellness programs.</li>
+                    <li>Fostering economic independence through savings and financial literacy.</li>
+                    <li>Building community partnerships for resources and opportunities.</li>
+                </ul>
+                
+                <p><strong>Create a brighter future by:</strong></p>
+                <ul>
+                    <li>Cultivating emotional intelligence, self-awareness, and confidence.</li>
+                    <li>Encouraging social responsibility, compassion, and community engagement.</li>
+                    <li>Supporting alumni networks for lifelong connections and support.</li>
+                </ul>
+                
+                <p><strong>Inspire positive change through:</strong></p>
+                <ul>
+                    <li>Community outreach and advocacy programs.</li>
+                    <li>Collaborations with local organizations and stakeholders.</li>
+                    <li>Research and innovation in child development and welfare.</li>
+                </ul>
+                
+                <p>Ultimately, I envision our orphanage as a beacon of hope, transforming vulnerable children into thriving, compassionate leaders who uplift their families, communities, and society.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Orphanage Section -->
+    <section class="section">
+        <div class="about-content">
+            <img src="Images/zico.jpg" alt="Zion in Christ Orphanage" class="about-image">
+            <div class="about-text">
+                <h2 class="sub-heading">Zion in Christ Orphanage at a Glance</h2>
+                <p>Zion in Christ Orphanage was registered in 2017 and dedicated in 2020 by Evang. Bilhatu Vou Dung, a passionate advocate for vulnerable children. The orphanage was established to provide a safe haven for orphaned and abandoned children, offering them a chance to grow and thrive in a loving and supportive environment.</p>
+                
+                <h3>PROGRAM AND SERVICES</h3>
+                <p>Zion in Christ Orphanage Home offers a range of programs and services designed to meet the physical, emotional, and spiritual needs of orphaned and vulnerable children. These include:</p>
+                <ul>
+                    <li><strong>Residential Care:</strong> We provide a safe and nurturing environment for children who have been orphaned or abandoned.</li>
+                    <li><strong>Education:</strong> We offer educational support and resources to help children achieve their academic goals.</li>
+                    <li><strong>Healthcare:</strong> We provide access to medical care and health services to ensure the physical well-being of the children in our care.</li>
+                    <li><strong>Spiritual Development:</strong> We offer spiritual guidance and support to help children develop a strong faith foundation.</li>
+                </ul>
+                
+                <h3>PARTNERSHIP AND COLLABORATION</h3>
+                <p>Zion in Christ Orphanage Home partners with local churches, organizations, and individuals to advance our mission and serve the most vulnerable members of society. We believe that collaboration and partnership are essential to achieving our goals and making a lasting impact in the lives of orphaned and vulnerable children.</p>
+                
+                <h3>REGISTRATION AND AFFILIATION</h3>
+                <p>Zion in Christ Orphanage is duly registered with the relevant government agencies:</p>
+                <ul>
+                    <li>Cooperate Affairs Commission (CAC)</li>
+                    <li>Association of Orphanage and Homes in Nigeria</li>
+                    <li>Kaduna state Ministry of Human Services and Social Development</li>
+                    <li>Department of Nigeria Security and Civil Defence Corps (NSCDC)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

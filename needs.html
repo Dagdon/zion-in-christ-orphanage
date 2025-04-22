@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Needs - Zion in Christ Orphanage</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Variables */
+        :root {
+            --primary-blue: #1a73e8;
+            --accent-orange: #FFA500;
+            --peach-text: #FFDAB9;
+            --white: #ffffff;
+            --black: #000000;
+            --text-dark: #333333;
+            --charcoal-gray: #36454F;
+            --dark-blue: #1a237e;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--white);
+            padding-top: 100px;
+        }
+
+        /* Header with Charcoal Gray Background */
+        header {
+            background-color: var(--charcoal-gray);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--peach-text);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .get-involved-btn {
+            background-color: var(--accent-orange);
+            color: var(--black);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Needs Content Section */
+        .needs-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: var(--charcoal-gray);
+        }
+
+        .needs-image {
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .needs-text {
+            flex: 1;
+        }
+
+        .needs-subheading {
+            color: var(--primary-blue);
+            font-size: 24px;
+            margin: 30px 0 15px;
+        }
+
+        .needs-section {
+            margin-bottom: 30px;
+        }
+
+        .needs-section h3 {
+            color: var(--primary-blue);
+            font-size: 20px;
+            margin: 20px 0 10px;
+        }
+
+        .needs-section ul {
+            margin-left: 20px;
+        }
+
+        .needs-section li {
+            margin-bottom: 10px;
+        }
+
+        .cta-button {
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .big-orange-btn {
+            background-color: var(--accent-orange);
+            color: var(--black);
+            padding: 15px 30px;
+            border-radius: 5px;
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 18px;
+            text-decoration: none;
+            display: inline-block;
+            transition: transform 0.3s;
+        }
+
+        .big-orange-btn:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .needs-content {
+                flex-direction: column;
+            }
+            
+            .needs-image {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Charcoal Gray Background -->
+    <header>
+        <div class="logo-container">
+            <img src="Images/zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="projects.html">PROJECTS</a></li>
+            <li><a href="needs.html">NEEDS</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="#" class="get-involved-btn">GET INVOLVED</a></li>
+        </ul>
+    </header>
+
+    <!-- Needs Content Section -->
+    <section class="needs-content">
+        <img src="Images/needs.jpg" alt="Children at Zion in Christ Orphanage" class="needs-image">
+        
+        <div class="needs-text">
+            <h2 class="needs-subheading">How You Can Make a Difference?</h2>
+            <p>At the heart of our home is a dream—to see every orphan grow up surrounded by love, hope, and the chance to live a full, meaningful life. Our mission is to raise these children in a Christ-centered environment where they are nurtured, equipped, and empowered to shine in society, no matter their background.</p>
+            
+            <p>To bring this vision to life, we need your support in a few key areas:</p>
+            
+            <div class="needs-section">
+                <h3>Education</h3>
+                <p>Every child deserves to learn. You can help by supporting school scholarships or even helping us build a school just for them.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Skills & Talents</h3>
+                <p>We want to teach these young ones practical skills that can help them build their future—this means providing training materials, sewing machines, computers, and more.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Modern Learning Tools</h3>
+                <p>In today's world, education goes beyond books. We dream of a learning center with laptops, internet access, and digital tools to prepare them for tomorrow.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Daily Meals</h3>
+                <p>A growing child needs nourishment. Your donations help put warm, healthy meals on their plates every day.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Health & Wellness</h3>
+                <p>From check-ups to emergency care, access to healthcare ensures our children grow up strong and well.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Clothing and Footwear</h3>
+                <p>Many of the children arrive with little to nothing. Regular donations of clothes, shoes, school uniforms, and seasonal wear (like sweaters and raincoats) are always a blessing.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Emotional and Spiritual Support</h3>
+                <p>Many of these children carry emotional wounds. Trained counselors, pastors, and mentors who can provide therapy, spiritual guidance, and love play a crucial role in their healing journey.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Safe and Comfortable Housing</h3>
+                <p>A secure, clean, and homely environment is essential. Support for building or maintaining dormitories, bathrooms, kitchens, and common rooms goes a long way.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Recreational Facilities & Sports Equipment</h3>
+                <p>Play is a powerful tool for healing. Things like footballs, board games, swings, musical instruments, and art supplies help them express themselves and enjoy their childhood.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Transport & Mobility</h3>
+                <p>From hospital visits to school runs and outreach programs, reliable transportation (buses, tricycles, even bicycles) is essential.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Volunteers and Staff Welfare</h3>
+                <p>Those who care for the children—house parents, teachers, cooks, guards—need encouragement and resources to stay motivated. Training, stipends, and appreciation gifts help a lot.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Sanitation & Hygiene Supplies</h3>
+                <p>Soap, toothpaste, sanitary pads, disinfectants, toilet paper—simple but crucial items that promote dignity and health.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Books & Learning Materials</h3>
+                <p>Textbooks, storybooks, workbooks, drawing books, pens, crayons - learning is better when it's colorful and engaging.</p>
+            </div>
+            
+            <div class="needs-section">
+                <h3>Sponsorship Programs</h3>
+                <p>Long-term donors who choose to "adopt" a child financially can provide consistent support, from school fees to birthday gifts.</p>
+            </div>
+            
+            <p>Each of these items represents more than just a material need, it's a piece of the puzzle that helps restore dignity, ignite dreams, and build a future full of possibility. Each gift, each prayer, each act of kindness brings us closer to creating a safe, loving, and purposeful life for these children.</p>
+            
+            <div class="cta-button">
+                <a href="get-involved.html" class="big-orange-btn">GET INVOLVED</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
