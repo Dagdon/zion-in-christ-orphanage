@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Involved - Zion in Christ Orphanage</title>
+    <style>
+        /* CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Color Variables */
+        :root {
+            --primary-orange: #E67E22;
+            --secondary-peach: #FFDAB9;
+            --accent-red: #C0392B;
+            --text-dark: #36454F;
+            --background-cream: #FFF8F0;
+            --charcoal-gray: #36454F;
+            --peach-text: #FFDAB9;
+        }
+
+        body {
+            background-color: var(--background-cream);
+            color: var(--text-dark);
+            line-height: 1.6;
+            padding-top: 100px;
+        }
+
+        /* Fixed Header */
+        header {
+            background-color: var(--charcoal-gray);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            height: 80px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 20px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--peach-text);
+            font-weight: 500;
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--white);
+        }
+
+        .get-involved-btn {
+            background-color: var(--primary-orange);
+            color: var(--black);
+            padding: 8px 15px;
+            border-radius: 5px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 5% 40px;
+            background: linear-gradient(rgba(230, 126, 34, 0.8), rgba(230, 126, 34, 0.8)), url('img/get-involved.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+
+        /* Content Section */
+        .content-section {
+            display: flex;
+            align-items: center;
+            padding: 40px 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .content-image {
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .content-text {
+            width: 60%;
+            padding-left: 40px;
+            text-align: center;
+        }
+
+        .content-text p {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .highlight-box {
+            background-color: var(--secondary-peach);
+            border-left: 5px solid var(--primary-orange);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box h3 {
+            color: var(--accent-red);
+            margin-bottom: 10px;
+        }
+
+        .bank-details {
+            background-color: white;
+            border: 2px dashed var(--primary-orange);
+            padding: 15px;
+            margin: 20px auto;
+            max-width: 400px;
+            border-radius: 8px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+            
+            .nav-links {
+                margin-top: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            .nav-links li {
+                margin: 5px 10px;
+            }
+            
+            .content-section {
+                flex-direction: column;
+            }
+            
+            .content-image {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            
+            .content-text {
+                width: 100%;
+                padding-left: 0;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header with Charcoal Gray Background -->
+    <header>
+        <div class="logo-container">
+            <img src="Images/zion_logo.jpg" alt="Zion in Christ Orphanage Logo" class="logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+            <li><a href="needs.html">NEEDS</a></li>
+            <li><a href="media.html">MEDIA</a></li>
+            <li><a href="get-involved.html" class="get-involved-btn">GET INVOLVED</a></li>
+        </ul>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Become a Friend, Be the Difference</h1>
+    </section>
+
+    <!-- Main Content Section -->
+    <section class="content-section">
+        <img src="Images/get-involved.jpg" alt="Children at Zion Orphanage" class="content-image">
+        
+        <div class="content-text">
+            <p>At Zion in Christ Orphanage, we are committed to giving vulnerable and orphaned children more than just shelter—we give them family, love, and the foundation to thrive. We raise every child with strong values, the Word of God, and a vision to become problem-solvers in their communities through education and purposeful careers.</p>
+            
+            <p>But we can't do it alone.</p>
+            
+            <p>Your support helps us clothe, feed, and educate these children, not just for today, but for the future they deserve. School materials, daily meals, medical care, and mentorship are ongoing needs.</p>
+            
+            <div class="highlight-box">
+                <h3>How You Can Get Involved:</h3>
+                
+                <p><span style="color: var(--primary-orange); font-size: 1.3em;">💛</span> <strong>Partner with us through monthly donations</strong><br>
+                Your consistent support goes directly into their wellbeing and growth.</p>
+                
+                <div class="bank-details">
+                    <p><strong>Account Name:</strong> Zion in Christ Orphanage<br>
+                    <strong>Account Number:</strong> 2032984952<br>
+                    <strong>Bank:</strong> First Bank</p>
+                </div>
+                
+                <p><span style="color: var(--primary-orange); font-size: 1.3em;">🎒</span> <strong>Donate school supplies and essentials</strong><br>
+                Educational materials are always in demand. You can help keep their dreams alive by contributing books, uniforms, writing tools, and more.</p>
+                
+                <p><span style="color: var(--primary-orange); font-size: 1.3em;">🎈</span> <strong>Visit the children</strong><br>
+                Sometimes, the greatest gift is your presence. Spend time with the kids, play, share stories, and become a friend they'll never forget.</p>
+            </div>
+            
+            <p>Let's raise the next generation together with faith, hope, and love.</p>
+        </div>
+    </section>
+</body>
+</html>
