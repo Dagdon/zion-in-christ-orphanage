@@ -63,39 +63,36 @@
             font-size: 14px;
         }
 
-        /* Hero Section - Corrected Text Styling */
+        /* Hero Section - Blue Box with White Text */
         .hero {
-            height: 50vh;
-            min-height: 400px;
-            background: 
-                linear-gradient(rgba(0,0,0,0.3), 
-                url('images/media/img1.jpg') center/cover no-repeat;
+            background-color: var(--primary-blue);
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 60px 20px;
+            margin: 20px 5%;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(26, 115, 232, 0.3);
         }
         .hero h1 {
-            color: var(--primary-blue);
+            color: var(--white);
             font-size: 2.5rem;
-            font-weight: 800; /* Bolder weight */
+            font-weight: 800;
             margin-bottom: 15px;
-            text-shadow: 1px 1px 3px rgba(255,255,255,0.8);
-            width: 100%;
+            line-height: 1.2;
         }
         .hero p {
-            color: var(--accent-orange);
-            font-size: 1.5rem;
+            color: var(--white);
+            font-size: 1.3rem;
             font-style: italic;
-            font-weight: 600;
+            font-weight: 400;
             max-width: 700px;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
-            width: 100%;
+            opacity: 0.9;
         }
 
-        /* Gallery Grid (unchanged from previous working version) */
+        /* Gallery Grid - Always 3 columns on all devices */
         .gallery-section {
             padding: 50px 5%;
             max-width: 1400px;
@@ -116,7 +113,7 @@
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
+            gap: 15px;
         }
         .gallery-item {
             overflow: hidden;
@@ -125,6 +122,10 @@
             transition: all 0.3s ease;
             aspect-ratio: 4/3;
         }
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+        }
         .gallery-img {
             width: 100%;
             height: 100%;
@@ -132,24 +133,26 @@
             display: block;
             transition: transform 0.5s;
         }
-
-        /* Responsive Breakpoints */
-        @media (max-width: 992px) {
-            .gallery-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .hero h1 {
-                font-size: 2.2rem;
-            }
-            .hero p {
-                font-size: 1.3rem;
-            }
+        .gallery-item:hover .gallery-img {
+            transform: scale(1.05);
         }
+
+        /* Mobile Responsive - Still maintain 3 columns but adjust spacing */
         @media (max-width: 768px) {
+            body {
+                padding-top: 160px; /* More padding for mobile stacked header */
+            }
+            
             header {
                 flex-direction: column;
                 padding: 10px;
+                min-height: 140px;
             }
+            
+            .logo {
+                height: 60px;
+            }
+            
             .nav-links {
                 margin-top: 15px;
                 flex-wrap: wrap;
@@ -158,20 +161,55 @@
             .nav-links li {
                 margin: 5px 10px;
             }
-        }
-        @media (max-width: 576px) {
-            .gallery-grid {
-                grid-template-columns: 1fr;
-            }
+            
             .hero {
-                height: 40vh;
-                min-height: 300px;
+                margin: 20px 3%;
+                padding: 40px 15px;
             }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .gallery-grid {
+                gap: 10px; /* Smaller gap on mobile */
+            }
+            
+            .gallery-section {
+                padding: 30px 3%;
+            }
+        }
+
+        /* Very small screens - reduce gap even more but keep 3 columns */
+        @media (max-width: 480px) {
+            body {
+                padding-top: 180px;
+            }
+            
+            header {
+                min-height: 160px;
+            }
+            
             .hero h1 {
                 font-size: 1.8rem;
             }
             .hero p {
-                font-size: 1.1rem;
+                font-size: 1rem;
+            }
+            
+            .gallery-grid {
+                gap: 8px; /* Very small gap for tiny screens */
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+            
+            .get-involved-btn {
+                font-size: 12px;
+                padding: 6px 12px;
             }
         }
     </style>
@@ -192,84 +230,84 @@
         </ul>
     </header>
 
-    <!-- Hero Section with Corrected Text -->
+    <!-- Hero Section with Blue Box -->
     <section class="hero">
         <h1>THROUGH THEIR EYES: STORIES OF HOPE</h1>
         <p>Experience the journey of our children</p>
     </section>
 
-    <!-- Gallery Section (unchanged) -->
+    <!-- Gallery Section -->
     <section class="gallery-section">
         <div class="gallery-title">
             <h2 class="sub-heading">Our Photo Gallery</h2>
         </div>
         <div class="gallery-grid">
 <!-- All 65 Images with Proper Aspect Ratio -->
-            <div class="gallery-item"><img src="images/media/img1.jpg" alt="Children at Zion Orphanage" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img2.jpg" alt="Children learning" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img3.jpg" alt="Children playing" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img4.jpg" alt="Classroom activity" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img5.jpg" alt="Celebration event" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img6.jpg" alt="Group photo" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img7.jpg" alt="Art workshop" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img8.jpg" alt="Meal time" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img9.jpg" alt="Outdoor games" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img10.jpg" alt="Reading time" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img11.jpg" alt="Children praying" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img12.jpg" alt="Gardening activity" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img13.jpg" alt="Music class" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img14.jpg" alt="Birthday celebration" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img15.jpg" alt="Volunteer visit" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img16.jpg" alt="Sports day" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img17.jpg" alt="Computer class" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img18.jpg" alt="Handicraft making" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img19.jpg" alt="Group study" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img20.jpg" alt="Cultural event" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img21.jpg" alt="Children dancing" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img22.jpg" alt="Science project" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img23.jpg" alt="Donor visit" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img24.jpg" alt="Morning assembly" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img25.jpg" alt="Art exhibition" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img26.jpg" alt="Children singing" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img27.jpg" alt="Outdoor learning" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img28.jpg" alt="Meditation time" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img29.jpg" alt="Library visit" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img30.jpg" alt="Community service" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img31.jpg" alt="Holiday celebration" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img32.jpg" alt="Vocational training" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img33.jpg" alt="Children writing" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img34.jpg" alt="Nature walk" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img35.jpg" alt="Drama performance" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img36.jpg" alt="Cooking class" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img37.jpg" alt="Field trip" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img38.jpg" alt="Children laughing" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img39.jpg" alt="Handwashing lesson" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img40.jpg" alt="Team building" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img41.jpg" alt="Storytelling" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img42.jpg" alt="Planting trees" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img43.jpg" alt="Math class" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img44.jpg" alt="Children sleeping" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img45.jpg" alt="Painting activity" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img46.jpg" alt="New arrivals" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img47.jpg" alt="Health checkup" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img48.jpg" alt="Bible study" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img49.jpg" alt="Playground time" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img50.jpg" alt="Children praying" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img51.jpg" alt="Group photo" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img52.jpg" alt="Leadership training" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img53.jpg" alt="Children reading" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img54.jpg" alt="Cultural dress" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img55.jpg" alt="Science experiment" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img56.jpg" alt="Children eating" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img57.jpg" alt="Vocational skill" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img58.jpg" alt="Group discussion" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img59.jpg" alt="Children smiling" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img60.jpg" alt="Art display" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img61.jpg" alt="Physical education" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img62.jpg" alt="Children helping" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img63.jpg" alt="Festival celebration" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img64.jpg" alt="Children studying" class="gallery-img"></div>
-            <div class="gallery-item"><img src="images/media/img65.jpg" alt="Graduation day" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img1.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img2.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img3.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img4.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img5.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img6.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img7.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img8.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img9.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img10.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img11.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img12.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img13.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img14.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img15.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img16.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img17.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img18.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img19.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img20.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img21.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img22.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img23.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img24.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img25.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img26.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img27.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img28.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img29.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img30.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img31.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img32.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img33.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img34.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img35.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img36.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img37.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img38.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img39.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img40.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img41.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img42.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img43.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img44.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img45.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img46.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img47.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img48.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img49.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img50.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img51.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img52.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img53.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img54.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img55.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img56.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img57.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img58.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img59.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img60.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img61.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img62.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img63.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img64.jpg" class="gallery-img"></div>
+            <div class="gallery-item"><img src="images/media/img65.jpg" class="gallery-img"></div>
         </div>
     </section>
 </body>

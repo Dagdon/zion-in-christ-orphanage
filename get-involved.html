@@ -152,9 +152,18 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            body {
+                padding-top: 160px; /* Increased padding for mobile to account for stacked header */
+            }
+            
             header {
                 flex-direction: column;
                 padding: 10px;
+                min-height: 140px; /* Ensure header has minimum height */
+            }
+            
+            .logo {
+                height: 60px; /* Slightly smaller logo on mobile */
             }
             
             .nav-links {
@@ -183,6 +192,34 @@
             
             .hero h1 {
                 font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 40px 5% 30px; /* Reduced top padding since we increased body padding */
+            }
+        }
+
+        /* Extra small screens */
+        @media (max-width: 480px) {
+            body {
+                padding-top: 180px; /* Even more padding for very small screens */
+            }
+            
+            header {
+                min-height: 160px;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+            
+            .get-involved-btn {
+                font-size: 12px;
+                padding: 6px 12px;
             }
         }
     </style>
