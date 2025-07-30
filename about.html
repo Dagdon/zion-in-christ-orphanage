@@ -29,7 +29,7 @@
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--white);
-            padding-top: 100px; /* Proper spacing for desktop header */
+            padding-top: 100px;
         }
 
         /* Header with Charcoal Gray Background */
@@ -130,6 +130,8 @@
             margin: 0 auto;
             text-align: left;
             padding: 0 20px;
+            font-size: 16px;
+            line-height: 1.7;
         }
 
         .vision-text ul {
@@ -168,30 +170,45 @@
             margin: 10px 0 20px 20px;
         }
 
-        /* Responsive Design */
+        /* Enhanced Mobile Responsiveness */
         @media (max-width: 768px) {
             body {
-                padding-top: 150px; /* Increased padding for mobile header */
+                padding-top: 140px;
             }
             
             header {
                 flex-direction: column;
-                padding: 15px 10px; /* Adjusted padding for better mobile spacing */
+                padding: 10px;
+            }
+            
+            .logo {
+                height: 60px;
             }
             
             .nav-links {
-                margin-top: 15px;
+                margin-top: 10px;
                 flex-wrap: wrap;
                 justify-content: center;
+                padding: 5px 0;
             }
             
             .nav-links li {
                 margin: 5px 10px;
             }
             
+            .visioneer-content {
+                padding-top: 10px;
+            }
+            
             .visioneer-image {
-                width: 250px;
-                height: 250px;
+                width: 220px;
+                height: 220px;
+                margin-bottom: 20px;
+            }
+            
+            .vision-text {
+                padding: 0 15px;
+                font-size: 15px;
             }
             
             .about-content {
@@ -203,9 +220,30 @@
                 max-width: 400px;
                 margin: 0 auto;
             }
-
+            
             .section {
-                padding-top: 20px; /* Reduced top padding on mobile */
+                padding: 25px 5% 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 130px;
+            }
+            
+            .visioneer-image {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .vision-text {
+                font-size: 14px;
+                padding: 0 10px;
+            }
+            
+            .sub-heading {
+                font-size: 16px;
+                padding: 6px 10px;
             }
         }
     </style>
