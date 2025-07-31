@@ -158,6 +158,7 @@
         .about-text {
             flex: 1;
             color: var(--dark-blue);
+            font-size: 16px;
         }
 
         .about-text h3 {
@@ -173,23 +174,23 @@
         /* Enhanced Mobile Responsiveness */
         @media (max-width: 768px) {
             body {
-                padding-top: 140px;
+                padding-top: 160px; /* Increased padding for mobile stacked header */
             }
             
             header {
                 flex-direction: column;
                 padding: 10px;
+                min-height: 140px; /* Ensure header has minimum height */
             }
             
             .logo {
-                height: 60px;
+                height: 60px; /* Slightly smaller logo on mobile */
             }
             
             .nav-links {
-                margin-top: 10px;
+                margin-top: 15px;
                 flex-wrap: wrap;
                 justify-content: center;
-                padding: 5px 0;
             }
             
             .nav-links li {
@@ -228,7 +229,11 @@
 
         @media (max-width: 480px) {
             body {
-                padding-top: 130px;
+                padding-top: 180px; /* Even more padding for very small screens */
+            }
+            
+            header {
+                min-height: 160px;
             }
             
             .visioneer-image {
@@ -244,6 +249,15 @@
             .sub-heading {
                 font-size: 16px;
                 padding: 6px 10px;
+            }
+            
+            .nav-links a {
+                font-size: 14px;
+            }
+            
+            .get-involved-btn {
+                font-size: 12px;
+                padding: 6px 12px;
             }
         }
     </style>
